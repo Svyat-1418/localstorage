@@ -3,6 +3,7 @@ import styles from './App.module.css';
 
 function App() {
     const [value, setValue] = useState(0)
+    const [firstRendering, setFirstRendering] = useState(true)
 
     useEffect(() => {
         const valueAsString = localStorage.getItem("counterValue")
@@ -13,6 +14,10 @@ function App() {
     }, [])
 
     useEffect(() => {
+        if (firstRendering) {
+            setFirstRendering(false)
+            return
+        }
         localStorage.setItem("counterValue", JSON.stringify(value))
     }, [value])
 
