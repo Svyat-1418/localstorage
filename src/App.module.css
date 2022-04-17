@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+  width: 1200px;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.btnWrap button{
+  padding: 10px;
+  margin: 5px;
+  background: #da3620;
+  color: silver;
+  outline: none;
+  border: none;
+  font-size: 18px;
+}
